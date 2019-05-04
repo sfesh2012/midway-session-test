@@ -8,5 +8,10 @@ export = (appInfo: any) => {
   config.middleware = [
   ];
 
+  config.session = {
+    key: 'my_sess',
+    maxAge: 1 * 60 * 1000  // session超时1分钟
+  };
+
   return config;
 };
