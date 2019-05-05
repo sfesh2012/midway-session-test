@@ -2,7 +2,7 @@ import { controller, get, inject, provide } from 'midway';
 import { IUserService, IUserResult } from '../../interface';
 
 @provide()
-@controller('/user')
+@controller('/user', {middleware: ['apiMiddleware']})
 export class UserController {
   @inject('userService')
   service: IUserService;
